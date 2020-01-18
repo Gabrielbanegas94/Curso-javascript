@@ -1,9 +1,14 @@
 'use strict'
 
 var categorias = ["terror", "comedia", "accion"];
-var peliculas =["hellowen", "jojo rabbit", "1917"];
+var peliculas =["hellowen", "habia una vez en hollywood", "buenos muchahcos", "amelie", "taxi driver"];
 
 var cine = [categorias,peliculas];
+/*var alfabetico =peliculas.sort();//ordena en orden alfabetico
+var en_reverso = peliculas.reverse();
+
+console.log("en reverso <br/>");
+console.log(en_reverso);*/
 
 //console.log(cine);
 /*var elemento ="";
@@ -29,4 +34,6 @@ if(indice > -1)
 }
 
 var peliculaString=peliculas.join();//convierte las peliculas a texto
-console.log(peliculaString);
+var cadena = "peras,bananas,manzanas";
+var cadena_array = cadena.split(",");// lo convierte la cadena en array
+console.log(cadena_array);

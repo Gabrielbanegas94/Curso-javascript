@@ -22,9 +22,25 @@ document.write("<ul>");
 {
     document.write("<li>" + lenguajes[i] + "</li>");
 }*/
-lenguajes.forEach((elemento, indice, arr)=>{//recorre y muestra
+/*lenguajes.forEach((elemento, indice, arr)=>{//recorre y muestra
     console.log(arr);
     document.write("<li>" + indice + " - " + elemento+ "</li>");
-});
+});*/
+
+for(let lenguaje in lenguajes){//for in
+    document.write("<li>" + lenguajes[lenguaje] + "</li>");
+}
+
 
 document.write("</ul");
+
+//busquedas
+
+var precios =[10,20,50,80,12];
+
+//var busqueda=lenguajes.findIndex(lenguaje => lenguaje == "PHP");
+
+var busqueda=precios.some(precio => precio >=20);//si un precio es mayor o igual a 20
+
+
+console.log(busqueda);
