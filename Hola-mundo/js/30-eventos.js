@@ -23,6 +23,8 @@ window.addEventListener("load", ()=> {
     //click
     boton.addEventListener("click",function(){
     cambiarcolor();
+    this.style.border= "10px solid black";// hago referencia al objeto
+    console.log(this);
     });//captura el evento sin ensuciar el html
     //mouse over
     boton.addEventListener("mouseover",function()
