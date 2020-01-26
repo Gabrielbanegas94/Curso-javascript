@@ -1,13 +1,22 @@
 'use strict'
 window.addEventListener("load", () => {
+    
     console.log("dom cargado");
+    
     var formulario = document.querySelector("#formulario");
+    
     var box_dashed = document.querySelector(".dashed");
+
     box_dashed.style.display ="none";//no lo muestra
+    
     formulario.addEventListener('submit', () => {
+    
         console.log("evento capturado");
+    
         var nombre = document.querySelector("#nombre").value;///toma el valor que tiene dentro
+    
         var apellido = document.querySelector("#apellido").value;
+    
         var edad = document.querySelector("#edad").value;
          //***validacion del formulario */
         if(nombre.trim()==null || nombre.trim().length==0 ||!isNaN(nombre))
@@ -31,7 +40,9 @@ window.addEventListener("load", () => {
         }
 
         var p_nombre= document.querySelector("#p_nombre span");
+    
         var p_apellido= document.querySelector("#p_apellido span");
+    
         var p_edad= document.querySelector("#p_edad span");
         
         box_dashed.style.display ="block";//cuando meto la info lo muestra
