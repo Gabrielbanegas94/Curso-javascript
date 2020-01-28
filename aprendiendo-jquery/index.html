@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery</title>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+  </script>-->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/01-selectores.js"></script>
+<style>
+.zebra{
+    border: 5px dashed black;
+
+      }
+.grande{
+    font-size: 30px;
+}
+.margen-superior
+{
+    display: block;
+    margin-top: 45px;
+}
+.resaltado
+{
+    border-bottom: 2px solid green;
+}
+</style>
+</head>
+<body>
+    <h1>Jquery</h1>
+    <ul>
+        <li><a href="https://www.google.com" title="google">Ir a google</a></li>
+        <li><a href="https://www.facebook.com" title="facebook">Ir a facebook</a></li>
+        
+    </ul>
+    <p id="rojo" class="sinborde">ejercicio de Jquery</p>
+    <p id="amarillo" class ="zebra"> practicando con selectores</p>
+    <p id="verde"class="sinborde" >lo paso a verde</p>
+    <p class ="zebra" >soy blanco</p>
+
+    <div id="caja">
+        <p>hola soy una caja</p>
+        <ul>
+            <li>elemento 1</li>
+            <li class="resaltado">elemento 2</li>
+        </ul>
+     
+            <span class="resaltado">soy span</span >
+      
+    </div>
+
+</body>
+</html>
