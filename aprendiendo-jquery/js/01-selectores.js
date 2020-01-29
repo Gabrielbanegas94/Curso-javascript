@@ -27,7 +27,7 @@ $(".sinborde").click(function(){
         }
     });
 
-   ///selectires de atributo
+   ///selectores de atributo
    $('[title="google"]').css("background","green");//sellecciona el atributo con google 
    $('[title="facebook"]').css("background","blue");
   //otros
