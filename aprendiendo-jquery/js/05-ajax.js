@@ -42,7 +42,7 @@ $(document).ready(function () {
            error:function() {
                console.log("ocurrio un error");
            },
-           timeout:100
+           timeout:1000
 
        });
        return false
