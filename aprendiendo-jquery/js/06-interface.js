@@ -18,5 +18,22 @@ $(document).ready(function()
        }
    });
 
+   //efectos
+   $("#mostrar").click(function(){
+          $(".caja-efectos").effect("explode");
+   });
+// Tooltip
+$(document).tooltip();
+
+// Dialog
+$("#lanzar-popup").click(function(){
+    $("#popup").dialog();
+})
+
+// Datepicker
+$("#calendario").datepicker();
+
+// Tabs
+$("#pestanas").tabs();
 
 });
