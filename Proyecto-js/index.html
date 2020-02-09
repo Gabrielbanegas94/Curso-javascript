@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Proyecto Javascript</title>
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!--estilos css-->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+     <!--Mis scripts-->
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -16,14 +23,14 @@
         <header>
             <div id="logo">
 
-                <h1>Proyecto JS</h1>                    
+                <h1>Proyecto JS</h1>
             </div>
 
             <div class="clearfix"></div>
 
             <nav id="menu">
 
-                <ul >
+                <ul>
                     <li><a href="#">INICIO</a></li>
                     <li><a href="#">RELOJ</a></li>
                     <li><a href="#">SOBRE MI</a></li>
@@ -33,7 +40,11 @@
         </header>
         <!--slider-->
         <div id="slider">
-
+            <div class="bxslider">
+                <div><img src="img/hojas.jpg" title="Hojas"></div>
+                <div><img src="img/rojo.jpg" title="Rojo"></div>
+                <div><img src="img/cielo.jpg" title="Cielo"></div>
+            </div>
         </div>
 
         <!--Contenido-->
@@ -59,10 +70,53 @@
                     </p>
                     <a href="#" class="button-more">Leer Más</a>
                 </article>
-            </div>
-            <sidebar id="sidebar">
+                <article class="post">
+                    <h2>Titulo del articulo</h2>
+                    <span class="date">Fecha de publicacion</span>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Cras tortor enim, pellentesque sed arcu non, ullamcorper laoreet lorem.
+                        Fusce justo libero, posuere id elit nec, volutpat congue enim.
+                        Pellentesque maximus accumsan consectetur. Mauris venenatis quam eget pharetra eleifend.
+                        Sed sit amet accumsan ante. Integer vehicula nulla ac dolor egestas ultrices in eget turpis.
+                        Sed sollicitudin nulla eget nulla dictum consequat. Donec sed diam quis orci porttitor lacinia.
+                        Pellentesque consectetur maximus tristique.
+                        Aliquam elit justo, fermentum eget faucibus eget,
+                        pulvinar eget urna. Cras augue magna, viverra a neque at, suscipit aliquet mi.
+                        Curabitur efficitur dictum neque. Mauris consectetur faucibus aliquet.
+                        Aliquam non convallis turpis, lobortis tempor est.
+                        Vivamus fringilla, magna a finibus elementum, nulla enim molestie velit, eu laoreet ligula ante
+                        eu lacus.
+                    </p>
+                    <a href="#" class="button-more">Leer Más</a>
+                </article>
 
-            </sidebar>
+            </div>
+            <aside id="sidebar">
+                <div id="about">
+                    <h4>¿Quien Soy?</h4>
+                    <img src="img/caracol.jpg" alt="caracol" />
+                    <p>Aliquam non convallis turpis, lobortis tempor est.
+                        Vivamus fringilla, magna a finibus elementum, nulla enim molestie velit, eu laoreet ligula ante
+                        eu lacus. </p>
+                </div>
+
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                    <form>
+                        <label for="Name">Nombre</label>
+                        <input type="text" name="name" />
+
+                        <label for="mail">Correo</label>
+                        <input type="text" name="mail" />
+
+                        <label for="Password">Contraseña</label>
+                        <input type="password" name="password" />
+
+                        <input type="submit" value="entrar" />
+                    </form>
+                </div>
+            </aside>
 
             <div class="clearfix"></div>
         </section>
