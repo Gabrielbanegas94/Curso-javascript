@@ -73,6 +73,11 @@ body{
     float: left;
     font-family: helvetica,arial;
 }
+.post{
+    padding: 7px;
+    
+}
+
 .post h2{
 
     font-size: 30px;
@@ -80,7 +85,27 @@ body{
 }
 
 .post .date{
+ display: block;
  color:gray;
- float: left;
+ margin-top: 5px;
 
+}
+
+.post p{
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.button-more{
+    display: block;
+    padding: 15px;
+    background: #235e3d;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 70px;
+    float: auto;
 }
