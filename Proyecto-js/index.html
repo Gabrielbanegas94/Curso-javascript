@@ -14,8 +14,7 @@
     <!--estilos css-->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link id="theme" rel="stylesheet" type="text/css" href="css/green.css" />
-    <link rel="stylesheet" type="text/css" href="css/blue.css" />
-    <link rel="stylesheet" type="text/css" href="css/red.css" />
+    
 
     <!--moment js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
@@ -25,6 +24,12 @@
 </head>
 
 <body>
+    <div id="selector-theme">
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+        <div id="to-blue"></div>
+
+    </div>
     <section id="global">
         <!--Cabecera-->
         <header>
@@ -73,7 +78,7 @@
                     <h4><span>Identificate</span></h4>
                     <form>
                         <label for="Name">Nombre</label>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" id="form_name" />
 
                         <label for="mail">Correo</label>
                         <input type="text" name="mail" />
@@ -92,6 +97,7 @@
     </section>
     <footer>
         Curso JS
+        <a href="#" class="subir">Ir a arriba</a>
     </footer>
 </body>
 
