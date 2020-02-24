@@ -8,18 +8,20 @@
     <title>Proyecto Javascript</title>
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--Slider-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+   
     <!--estilos css-->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link id="theme" rel="stylesheet" type="text/css" href="css/green.css" />
     
-    <!--moment js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/es.js"></script>
      <!--Mis scripts-->
     <script type="text/javascript" src="js/main.js"></script>
+
+
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
@@ -42,27 +44,45 @@
             <nav id="menu">
 
                 <ul>
-                    <li><a href="#">INICIO</a></li>
+                    <li><a href="index.html">INICIO</a></li>
                     <li><a href="#">RELOJ</a></li>
                     <li><a href="about.html">SOBRE MI</a></li>
                     <li><a href="#">CONTACTO</a></li>
                 </ul>
             </nav>
         </header>
-        <!--slider-->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/hojas.jpg" title="Hojas"></div>
-                <div><img src="img/rojo.jpg" title="Rojo"></div>
-                <div><img src="img/cielo.jpg" title="Cielo"></div>
-            </div>
-        </div>
 
         <!--Contenido-->
         <section id="content">
-            <div id="posts">
-                
-                  <!--carga postd desde jason-->  
+            <div id="box">
+                <h2>Sobre mi</h2>
+                  <!--carga acordeon-->  
+                  <div id="acordeon">
+                       <h3>¿Quienes Somos?</h3>
+                       <div>
+                           <p>
+                            Aliquam non convallis turpis, lobortis tempor est.
+                            Vivamus fringilla, magna a finibus elementum, nulla enim molestie velit, eu laoreet ligula ante
+                            eu lacus.
+                           </p>
+                       </div>
+                       <h3>¿Quienes Somos?</h3>
+                       <div>
+                           <p>
+                            Aliquam non convallis turpis, lobortis tempor est.
+                            Vivamus fringilla, magna a finibus elementum, nulla enim molestie velit, eu laoreet ligula ante
+                            eu lacus.
+                           </p>
+                       </div>
+                       <h3>¿Quienes Somos?</h3>
+                       <div>
+                           <p>
+                            Aliquam non convallis turpis, lobortis tempor est.
+                            Vivamus fringilla, magna a finibus elementum, nulla enim molestie velit, eu laoreet ligula ante
+                            eu lacus.
+                           </p>
+                       </div>
+                  </div>
             </div>
             <aside id="sidebar">
                 <div id="about">

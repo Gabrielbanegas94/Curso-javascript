@@ -1,11 +1,13 @@
 $(document).ready(function(){
+  if (window.location.href.indexOf('index') > -1) {
     //Slider
     $('.bxslider').bxSlider({
         mode: 'fade',
         captions: true,
         slideWidth: 1200
       });
-
+    }
+    if (window.location.href.indexOf('index') > -1) {
       //post
       var posts=
       [
@@ -48,6 +50,7 @@ $(document).ready(function(){
           $("#posts").append(post);
 
      });
+    }
 
      ///Selector de tema
      var theme = $("#theme");
@@ -92,4 +95,8 @@ var about_parrafo = $("#about p");
   });
 
 }
+  if (window.location.href.indexOf('about') > -1) {
+    $("#acordeon").accordion();
+  }
+
 });
