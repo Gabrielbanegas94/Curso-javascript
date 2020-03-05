@@ -212,3 +212,40 @@ background:#ca3413 ;
     float: left;
     margin-top: 40px;
 }
+#acordeon{
+	margin-top: 20px;
+}
+
+
+#reloj{
+	font-size: 40px;
+	font-weight: bold;
+	font-family: Helvetica, Arial;
+	color: #333;
+	border: 5px dashed #333;
+	width: 30%;
+	padding: 30px;
+	margin: 0px auto;
+}
+
+
+#form_contact{
+	width: 50%;
+	margin-top: 15px;
+	font-family: Helvetica, Arial;
+}
+
+#form_contact label{
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.form-error{
+   /* float: right; */
+    font-size: 11px;
+    background: red;
+    color: white;
+    padding: 10px;
+    width: 100%;	
+}
