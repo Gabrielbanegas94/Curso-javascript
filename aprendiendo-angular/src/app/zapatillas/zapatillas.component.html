@@ -1,10 +1,35 @@
 <h2>{{titulo}}</h2>
+<p>Comprar zapatillas de las mejores marcas</p>
+<ul>
+    <li *ngFor="let marca of marcas">{{marca}}</li>
+</ul>
 <ul>
     <li *ngFor="let deportiva of zapatillas">
-        {{deportiva.nombre}}- <strong>${{deportiva.precio}}</strong>
-    <span *ngIf="deportiva.precio < 80"
-           [style.background]="deportiva.precio <80 ? 'green': 'blue'"
-           [style.color]="deportiva.precio <80 ? 'white': 'blue'">¡En Oferta!</span>
+        <span [ngStyle]="{
+            'text-decoration': !deportiva.stock ? 'line-through' :'none'
+        }">{{deportiva.nombre}}- <strong>${{deportiva.precio}}</strong></span>
+        <span *ngIf="deportiva.precio < 80" [style.background]="deportiva.precio <80 ? 'green': 'blue'"
+            [style.color]="deportiva.precio <80 ? 'white': 'blue'">¡En Oferta!</span>
+    </li>
+
+</ul>
+
+<p>El color de la mayoria de las zapatillas es : </p>
+
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase ="'yellow'">
+        el color predominantes es el : <span [ngStyle]="{'background':color}">amarrillo</span>
+    </li>
+    <li *ngSwitchCase ="'green'">
+        el color predominantes es el : <span [ngStyle]="{'background':color}">verde</span>
+    </li>
+    <li *ngSwitchCase ="'red'">
+        el color predominantes es el : <span [ngStyle]="{'background':color}">rojo</span>
+    </li>
+    <li *ngSwitchCase ="'blue'">
+        el color predominantes es el : <span [ngStyle]="{'background':color}">azul</span>
     </li>
     
+
+
 </ul>
