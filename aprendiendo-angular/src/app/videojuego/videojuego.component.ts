@@ -1,4 +1,4 @@
-import {Component } from '@angular/core';
+import {Component, OnInit,DoCheck,OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'videojuego',
@@ -6,7 +6,7 @@ import {Component } from '@angular/core';
 
 })
 
-export class VideoJuegoComponent{
+export class VideoJuegoComponent implements OnInit, DoCheck, OnDestroy{
 
   public titulo:string;
   public listado:string;
@@ -14,7 +14,23 @@ export class VideoJuegoComponent{
     {
       this.titulo= "componente de videojuegos";
       this.listado = "listado de los juegos mas populares";
-        console.log("se ha cargado el componente: Videojuego.component.ts");
+       // console.log("se ha cargado el componente: Videojuego.component.ts");
     }
 
+    ngOnInit(){
+       //  console.log("OnInit ejecutado");
+
+    }
+
+    ngDoCheck(){
+     // console.log("Docheck ejecutado");
+    }
+
+    ngOnDestroy(){
+     // console.log("Ondestroy ejectuado");
+    }
+
+    cambiarTitulo(){
+      this.titulo ="nuevo titulo del componente";
+    }
 }
