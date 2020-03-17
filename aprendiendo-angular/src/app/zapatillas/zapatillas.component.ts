@@ -12,10 +12,12 @@ export class zapatillasComponent implements OnInit{
     public zapatillas : Array<Zapatilla>;
     public marcas : string[];
     public color: string;
+    public mi_marca: string;
 
     constructor()
     {
-        this.color="red";
+        this.mi_marca ="Fila";
+        this.color="blue";
         this.marcas =new Array();
         this.zapatillas = [
             new Zapatilla('Rebbok clasicc','rebook','verde canario',80,false),
@@ -41,6 +43,18 @@ export class zapatillasComponent implements OnInit{
                }
         });
         console.log(this.marcas);
+    }
+
+    getMarca(){
+        alert(this.mi_marca);
+    }
+
+    addMarca(){
+        this.marcas.push(this.mi_marca);
+    }
+
+    borrarMarca(index){
+   this.marcas.splice(index,1);//le paso el indice a borrar y cuantos elementos quiero que elimine
     }
 
 }
