@@ -14,8 +14,10 @@ import {VideoJuegoComponent} from './videojuego/videojuego.component';
 ///array de rutas
 const appRoutes :Routes = [
     {path: '',component : HomeComponent},
+    {path: 'home',component : HomeComponent},
     {path: 'zapatillas',component : zapatillasComponent},
-    {path: 'cursos',component : CursosComponent},
+    {path: 'cursos',component : CursosComponent},//para que apellidos sea opcional
+    {path: 'cursos/:nombre/:followers',component : CursosComponent},
     {path: 'videojuego',component : VideoJuegoComponent},
     {path: '**',component:HomeComponent}
 ];
