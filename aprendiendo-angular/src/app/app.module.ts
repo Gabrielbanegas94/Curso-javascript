@@ -9,6 +9,8 @@ import { VideoJuegoComponent } from './videojuego/videojuego.component';
 import {zapatillasComponent} from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
+import { ExternoComponent } from './externo/externo.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,14 +18,16 @@ import { HomeComponent } from './home/home.component';
     VideoJuegoComponent,
     zapatillasComponent,
     CursosComponent,
-    HomeComponent
+    HomeComponent,
+    ExternoComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
   providers: [
     appRoutingProviders
