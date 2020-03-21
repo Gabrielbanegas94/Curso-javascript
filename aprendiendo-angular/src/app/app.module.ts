@@ -11,6 +11,8 @@ import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
 import { HttpClientModule} from '@angular/common/http';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HttpClientModule} from '@angular/common/http';
     zapatillasComponent,
     CursosComponent,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent,
+    CalculadoraPipe,
+    ContactoComponent
 
   ],
   imports: [
@@ -28,6 +32,7 @@ import { HttpClientModule} from '@angular/common/http';
     FormsModule,
     routing,
     HttpClientModule
+    
   ],
   providers: [
     appRoutingProviders
