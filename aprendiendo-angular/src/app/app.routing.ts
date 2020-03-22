@@ -1,30 +1,28 @@
-//Importar modules 
-import {ModuleWithProviders} from '@angular/core';
-import {Routes , RouterModule} from '@angular/router';
+// Importar modulos del router de angular
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-
-//Importar Componentes
-import {HomeComponent} from './home/home.component';
-import {zapatillasComponent} from './zapatillas/zapatillas.component';
-import {CursosComponent} from './cursos/cursos.component';
-import {VideoJuegoComponent} from './videojuego/videojuego.component';
+// Importar componentes
+import { HomeComponent } from './home/home.component';
+import { ZapatillasComponent } from './zapatillas/zapatillas.component';
+import { VideojuegoComponent } from './videojuego/videojuego.component';
+import { CursosComponent } from './cursos/cursos.component';
 import { ExternoComponent } from './externo/externo.component';
+import { ContactoComponent } from './contacto/contacto.component'; 
 
-
-
-
-///array de rutas
-const appRoutes :Routes = [
-    {path: '',component : HomeComponent},
-    {path: 'home',component : HomeComponent},
-    {path: 'zapatillas',component : zapatillasComponent},
-    {path: 'cursos',component : CursosComponent},//para que apellidos sea opcional
-    {path: 'cursos/:nombre/:followers',component : CursosComponent},
-    {path: 'videojuego',component : VideoJuegoComponent},
-    {path :'externo',component:ExternoComponent },
-    {path: '**',component:HomeComponent},
+// Array de rutas
+const appRoutes: Routes = [
+	{path: '', component: HomeComponent},
+	{path: 'home', component: HomeComponent},
+	{path: 'zapatillas', component: ZapatillasComponent},
+	{path: 'videojuego', component: VideojuegoComponent},
+	{path: 'cursos', component: CursosComponent},
+	{path: 'cursos/:nombre/:followers', component: CursosComponent},
+	{path: 'externo', component: ExternoComponent},
+	{path: 'contacto', component: ContactoComponent},
+	{path: '**', component: HomeComponent}
 ];
 
-//exportar modulo del routing
-export const appRoutingProviders: any[]=[];
-export const routing:ModuleWithProviders =RouterModule.forRoot(appRoutes);
+// Exportar el modulo del router
+export const appRoutingProviders: any[] = [];
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

@@ -1,58 +1,64 @@
-import {Component, OnInit} from '@angular/core';
-import { Zapatilla } from '../models/zapatilla';//..es para salir y  buscar en otra carpeta
-import {ZapatillaService} from '../services/zapatilla.service';
+import { Component, OnInit } from '@angular/core';
+import { Zapatilla } from '../models/zapatilla';
+import { ZapatillaService } from '../services/zapatilla.service';
 
 @Component({
-    selector: 'zapatillas',
-    templateUrl: './zapatillas.component.html',
-    //con providers le indico que es un servicio de mi componente
-    providers: [ZapatillaService]
+	selector: 'zapatillas',
+	templateUrl: './zapatillas.component.html',
+	providers: [ZapatillaService]
 })
+export class ZapatillasComponent implements OnInit{
+	public titulo: string = "Componente de zapatillas";
+	public zapatillas: Array<Zapatilla>;
+	public marcas: String[];
+	public color: string;
+	public mi_marca: string;
 
-export class zapatillasComponent implements OnInit{
+	constructor(
+		private _zapatillaService: ZapatillaService
+	){
+		this.mi_marca = "Fila";
+		this.color = 'blue';
+		this.marcas = new Array();
+	}
 
-    public titulo:string ="componente de zapatillas";
-    public zapatillas : Array<Zapatilla>;
-    public marcas : string[];
-    public color: string;
-    public mi_marca: string;
+	ngOnInit(){
+		this.zapatillas = this._zapatillaService.getZapatillas();
+		//alert(this._zapatillaService.getTexto());
 
-    constructor(private _zapatillaService : ZapatillaService)
-    {
-        this.mi_marca ="Fila";
-        this.color="blue";
-        this.marcas =new Array();
-      
-    }
+		this.getMarcas();
+	}
 
-    ngOnInit(){
-     this.zapatillas=this._zapatillaService.getZapatillas();//en este caso me provee de datos al componente
-     alert(this._zapatillaService.getTexto());   
-     this.GetMarcas();
+	getMarcas(){
+		this.zapatillas.forEach((zapatilla, index) =>{
+			
+			if(this.marcas.indexOf(zapatilla.marca) < 0){
+				this.marcas.push(zapatilla.marca);
+			}
+			
+		});
 
+		console.log(this.marcas);
+	}
 
-    }
-    GetMarcas(){
-        this.zapatillas.forEach((zapatilla,index)=>{
-            if(this.marcas.indexOf(zapatilla.marca)<0)
-            {//si no esta en el array lo inserta por nombre de marca
-            this.marcas.push(zapatilla.marca);//meto en el vector
-            
-               }
-        });
-        console.log(this.marcas);
-    }
+	getMarca(){
+		alert(this.mi_marca);
+	}
 
-    getMarca(){
-        alert(this.mi_marca);
-    }
+	addMarca(){
+		this.marcas.push(this.mi_marca);
+	}
 
-    addMarca(){
-        this.marcas.push(this.mi_marca);
-    }
+	borrarMarca(index){
+		// delete this.marcas[index];
+		this.marcas.splice(index, 1);
+	}
 
-    borrarMarca(index){
-   this.marcas.splice(index,1);//le paso el indice a borrar y cuantos elementos quiero que elimine
-    }
+	onBlur(){
+		console.log("Has salido del input");
+	}
 
+	mostrarPalabra(){
+		alert(this.mi_marca);
+	}
 }

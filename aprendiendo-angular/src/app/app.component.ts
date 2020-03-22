@@ -7,18 +7,19 @@ import { Configuracion } from './models/configuracion';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- public  title = 'Master de JS y angular';
- public descripcion :string;
- public mostrar_videojuegos : boolean= true;
- public config;
+  public title = 'Master de JavaScript y Angular';
+  public descripcion: string;
+  public mostrar_videojuegos: boolean = true;
+  public config;
 
- constructor(){
-this.config=Configuracion;
-  this.title = Configuracion.titulo;
-  this.descripcion = Configuracion.descripicion;
- }
+  constructor(){
+  	this.config = Configuracion;
+  	this.title = Configuracion.titulo;
+  	this.descripcion = Configuracion.descripcion;
+  }
 
- ocultarVideojuegos(value){
-   this.mostrar_videojuegos = value;
- }
+  ocultarVideojuegos(value){
+  	this.mostrar_videojuegos = value;
+  }
+
 }

@@ -1,16 +1,16 @@
-.altoprecio{
-    color:violet;
-    font-size: 18px;
+.altoPrecio{
+	color:gray;
+	font-size: 18px;
 }
 
 .fondoRojo{
-
-    background: red;
+	background: red;
 }
+
 .subrayado{
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .active{
-    border: 3px solid yellow;
+	border: 3px solid yellow;
 }
