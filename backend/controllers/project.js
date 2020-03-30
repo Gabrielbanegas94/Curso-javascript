@@ -49,7 +49,7 @@ var controller = {
     },
 //lista los proyectos
     getProjects: function(req,res){
-        project.find({}).sort('year').exec((err, projects )=>{
+        Project.find({}).sort('year').exec((err, projects )=>{
             if(err)return res.status(500).send({message:'error al devolver los datos'});
             if(!projects)return res.status(404).send({message:'No tengo projectos para mostrar'});
             return res.status(200).send({projects});
