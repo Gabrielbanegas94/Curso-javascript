@@ -94,7 +94,7 @@ var controller = {
 			var extSplit = fileName.split('\.');
 			var fileExt = extSplit[1];
 
-			if(fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif'){
+			if(fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif' || fileExt=='svg'){
 
 				Project.findByIdAndUpdate(projectId, {image: fileName}, {new: true}, (err, projectUpdated) => {
 					if(err) return res.status(500).send({message: 'La imagen no se ha subido'});

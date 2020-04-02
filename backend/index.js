@@ -5,12 +5,12 @@ var mongoose= require('mongoose');///carga el modulo de mongoose
 var app =require('./app');
 var port = 3700;
 mongoose.Promise=global.Promise;
-mongoose.connect('mongodb://localhost:27017/Portafolio')
+mongoose.connect('mongodb://localhost:27017/Portafolio')//1 conecta a la  base de datos
      .then(()=>{
            console.log("coneccion exitosa para todes");
-           app.listen(port , ()=> {
+           app.listen(port , ()=> {///le dice que hostee en este puerto
            
-            console.log("el servidor corre como alla url 3700");
+            console.log("el servidor esta hosteando en la url 3700");
 
            });
 
